@@ -37,316 +37,55 @@ input {
 
 body {
   background: url("../assets/images/bg.jpg");
-  font-size: 62.5%;
-  //  box-shadow: inset 0 0 10px #000000;
-  //  -moz-box-shadow: inset 0 0 10px #000000;
-  //  -webkit-box-shadow: inset 0 0 10px #000000;
+  font-size: 100%;
 }
 
-.row {
-  display: flex;
-  gap: 2em;
-  width: 100%;
-  min-height: 100vh;
-  padding: 1em;
-
-  @media only screen and (max-width: calc(768em/16)) {
-    flex-direction: column;
-  }
-
-  .col {
-    flex: 1;
-    padding: 1em;
-  }
-}
-
-.row:after {
+.row::after {
   content: "";
+  display: table;
   clear: both;
-  display: block;
 }
 
-.contents {
-  width: 100%;
-  min-height: 100%;
-  z-index: -1;
-}
+.column {
+  max-width: 1200px;
+  float: left;
+  padding: 1.5rem;
 
-.body-content {
-  // text-align: center;
-  bottom: 0;
-  left: 0;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-  // box-shadow: inset 0 0 10px #000000;
-  // -moz-box-shadow: inset 0 0 10px #000000;
-  // -webkit-box-shadow: inset 0 0 10px #000000;
-}
-
-.pages {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  display: none;
-  gap: 1rem;
-
-  .page-number {
-    flex: 1;
-    display: inline-block;
-    color: $color-2;
-    padding: 0.5rem 1.25rem;
-    border: 2px solid $color-2;
-    border-radius: 50%;
-  }
-}
-
-.title-block {
-  margin: 1em 0;
-  display: flex;
-  display:-webkit-flex;
-  gap: 0.5em;
-  justify-items: center;
-
-  .title {
-    font-size: 1.5rem;
-    color: $color-3;
+  &.left-side {
+    width: 25%;
+    height: 100vh;
   }
 
-  .rule {
-    flex: auto;
-    align-self: center;
-    border-top: 4px solid $color-3;
-  }
-}
-
-.col-content {
-  min-height: 100%;
-  padding: 0.5rem;
-  font-size: 1rem;
-
-  .education {
-    display: flex;
-    gap: 0.5em;
-    margin-bottom: 1em;
-    justify-content: stretch;
-
-    .year {
-      border-left: 2px solid $color-1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      padding-left: 0.5em;
-      border-radius: 2px;
-
-      p {
-        font-size: 1.5em;
-        font-weight: bold;
-        color: $color-1;
-      }
-    }
-
-    .place {
-      line-height: 1.5rem;
-
-      .award {
-        font-size: 1rem;
-        line-height: 1.4em;
-        font-weight: bold;
-        color: $color-3;
-      }
-    }
-  }
-}
-
-.home-first {
-  position: relative;
-  // top: 50%;
-  // left: 50%;
-  // transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100%;
-  min-height: 300px;
-  margin: auto;
-  padding: 3em auto;
-
-  .home-name {
-    font-family: "Nevrada", Arial, Helvetica, sans-serif;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    h1 {
-      font-size: 5em;
-      line-height: 1em;
-      color: $color-3;
-      font-family: "Nevrada", Arial, Helvetica, sans-serif;
-
-      &:nth-child(2) {
-        display: flex;
-
-        &::after {
-          // display: inline-block;
-          position: absolute;
-          top: -10%;
-          z-index: -1;
-          right: -15%;
-          bottom: 60%;
-          content: "";
-          width: 100px;
-          height: 100px;
-          background: url("../assets/svgs/shape2.svg");
-        }
-      }
-    }
-
-    .home-proffession {
-      position: absolute;
-      bottom: -20%;
-      letter-spacing: 0.2em;
-      font-size: 0.9em;
-      font-weight: bold;
-    }
-  }
-}
-.bio {
-  line-height: 2em;
-  font-size: 1.2em;
-  text-align: center;
-  p {
-    margin-bottom: 1.5em;
-  }
-}
-
-.interest {
-  // display: flex;
-  width: 100%;
-
-  .item {
+  &.middle {
     width: 50%;
-    text-align: center;
-    line-height: 2em;
-    float: left;
-    margin: 3em auto;
-    // margin-bottom: 4em;
-
-    .item-pic {
-      width: 42px;
-      height: 42px;
-      color: $color-1;
-    }
-
-    p {
-      color: $color-3;
-      font-weight: bold;
-    }
   }
-}
 
-.highlight {
-  background-color: #edbd9b;
-}
+  &.right-side {
+    width: 25%;
+    height: 100vh;
+  }
 
-.contact-heading {
-  display: flex;
-  justify-content: space-between;
+  @media screen and (max-width: 640px) {
+    &.middle {
+      width: 100%;
+    }
 
-  .let {
-    // flex: 2;
-    display: flex;
-    flex-direction: column;
-
-    p {
-      font-family: "Nevrada";
-      flex: 1;
-      align-self: flex-end;
-      font-size: 1.4em;
-
-      &:first-child {
-        color: $color-1;
-      }
-
-      &:last-child {
-        color: $color-3;
-      }
+    &.left-side,
+    &.right-side {
+      display: none;
     }
   }
 
-  .my-resume {
-    display: inline-block;
-    cursor: pointer;
+  @media screen and (max-width: 1007px) and (min-width:641px) {
+    &.middle {
+      width: 70%;
+    }
 
-    span {
-      padding: 0.5rem 1rem;
-      border: 2px solid $color-3;
+    &.left-side {
+      width: 30%;
+    }
+    &.right-side {
+      display: none;
     }
   }
-}
-
-form {
-  input,
-  textarea {
-    width: 100%;
-    margin: 12px 0;
-    padding: 0.5em 1em;
-    border: 2px solid $color-3;
-    background: transparent;
-  }
-
-  button {
-    margin: 12px 0;
-    padding: 0.5em 1em;
-    border: 2px solid $color-3;
-    background: transparent;
-    cursor: pointer;
-  }
-}
-
-.introduction {
-  width: fit-content;
-  margin: auto auto;
-  min-height: fit-content;
-  top: 50;
-  transform: translateY(0%);
-
-  @media only screen and (min-width: calc(769em/16)) {
-    transform: translateY(50%);
-  }
-}
-
-.intro-line {
-  display: flex;
-  gap: .5rem;
-  margin: .75em 0;
-
-  .icon {
-    // flex: 1;
-    width: 24px;
-    height: 24px;
-    color: $color-3;
-  }
-
-  p, a {
-    flex: auto;
-    line-height: 24px;
-    color: $color-2;
-  }
-}
-
-.pic-frame {
-  display: flex;
-  // content: "";
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-  margin: auto;
-  line-height: 100%;
-  justify-content: center;
-  // background: url('../assets/svgs/frame.svg');
-}
-
-.space {
-  content: "";
-  margin: 2rem 0;
 }
