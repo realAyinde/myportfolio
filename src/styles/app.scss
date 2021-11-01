@@ -293,6 +293,11 @@ body {
     font-weight: normal;
   }
 
+  p {
+    font-size: 1rem;
+    line-height: 1.25rem;
+  }
+
   form {
     margin: 1em 0;
     input,
@@ -313,6 +318,7 @@ body {
       border-radius: 4px;
       color: $color-2;
       font-weight: bold;
+      cursor: pointer;
     }
 
     .message {
@@ -327,6 +333,7 @@ body {
         border-top: none;
         border-radius: 0 0 4px 4px;
         margin: 0;
+        resize: none;
       }
     }
   }
@@ -504,7 +511,7 @@ body {
   }
 }
 
-#work-experience {
+#work_experience {
   height: 100%;
   font-size: .9rem; //
 
