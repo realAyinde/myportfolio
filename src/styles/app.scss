@@ -160,9 +160,9 @@ body {
     height: 24px;
     width: 24px;
     line-height: 42px;
-    text-align: center;
     cursor: pointer;
     transition: 0.2s;
+    align-self: center;
 
     &:hover {
       height: 28px;
@@ -453,6 +453,69 @@ body {
       outline: none;
       background: $color-4;
       cursor: pointer;
+    }
+  }
+}
+
+#interests {
+  height: 100%;
+
+  .interest-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    justify-items: center;
+  }
+
+  .interest {
+    width: 50%;
+    margin: 2rem 0;
+    text-align: center;
+
+    &:first-child {
+      width: 100%;
+    }
+
+    img {
+
+      height: 52px;
+    }
+
+    p {
+      margin: 0.5rem 0;
+        font-weight: bold;
+    }
+  }
+}
+
+#education {
+  height: 100%;
+  font-size: .9rem; //
+
+  .education-container {
+    display: flex;
+    flex-direction: column;
+    
+    
+    li {
+      margin: 1em 0;
+      line-height: 2em;
+    }
+  }
+}
+
+#work-experience {
+  height: 100%;
+  font-size: .9rem; //
+
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    
+    
+    li {
+      margin: 1em 0;
+      line-height: 2em;
     }
   }
 }
