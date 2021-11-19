@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "description": "",
   "source": ["src/index.html", "src/about/index.html", "src/contact/index.html", "src/others/index.html"],
-  "main": "index.html",
   "scripts": {
     "clean": "rm dist/*",
     "start": "parcel",
