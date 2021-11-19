@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact - Ayinde Sodiq</title>
+    <link rel="stylesheet" href="../style.scss">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('YOUR_USER_ID');
+        })();
+    </script>
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('contact_service', 'contact_form', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+    </script>
+  </head>
+  <body>
+    
+<!-- Loader -->
+<div class="loader-wrapper">
+  <div class="loader"></div>
+  <div class="loader-section section-left"></div>
+  <div class="loader-section section-right"></div>
+</div>
+
+    <div class="row">
+      <div class="column left-side" id="left-side-bar">
+        <div class="navigations">
+          <ul>
+            <li class="home-icon">
+                <a href="/">   
+                    <img
+                      class="icon"
+                      src="../assets/svgs/home-svgrepo-com.svg"
+                      alt=""
+                    />
+                </a>
+            </li>
+            <li><a href="/about">ABOUT</a></li>
+            <li><a class="active" href="/contact">CONTACT</a></li>
+            <li><a href="/others">OTHERS</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="column middle" id="main">
+        <ul class="mobile-nav">
+          <li class="home-icon">
+            <img class="icon" src="../assets/svgs/home-svgrepo-com.svg" alt="home" />
+          </li>
+          <li><a href="/about">ABOUT</a></li>
+          <li><a class="active" href="/contact">CONTACT</a></li>
+          <li><a href="/others">OTHERS</a></li>
+          <li class="switch"><div class=""></div></li>
+        </ul>
+        <div id="contact">
+          <h2>Let's connect</h2>
+          <p>
+            I'm interested in Job Opportunities. However, if you have other
+            request, question or anything you wish to share with me. Kindly make
+            use of the form, friend.
+          </p>
+          <form action="#" id="contact-form">
+            <input type="hidden" name="contact_number">
+            <input type="text" name="user_name" id="" placeholder="Name" autocomplete="0" />
+            <input type="email" name="user_email" id="" placeholder="Email" autocomplete="0" />
+
+            <div class="message">
+              <input type="text" placeholder="Subject" autocomplete="0" />
+              <textarea
+                name="message"
+                cols="30"
+                rows="8"
+                placeholder="Message body..."
+              ></textarea>
+            </div>
+            <button type="submit" value="Send">SEND</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <div class="socials">
+        <a target="_blank" href="https://github.com/realAyinde">
+          <img
+            class="item-pic"
+            src="../assets/svgs/github-alt-svgrepo-com.svg"
+            alt=""
+          />
+        </a>
+        <a target="_blank" href="https://twitter.com/realAyinde">
+          <img
+            class="item-pic"
+            src="../assets/svgs/twitter-social-media-svgrepo-com.svg"
+            alt=""
+          />
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/realayinde">
+          <img
+            class="item-pic"
+            src="../assets/svgs/linkedin-svgrepo-com.svg"
+            alt=""
+          />
+        </a>
+      </div>
+    <script>
+        window.addEventListener('load',function(){
+    document.querySelector('body').classList.add("loaded")  
+  });
+    </script>
+  </body>
+</html>
