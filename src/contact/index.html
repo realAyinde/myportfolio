@@ -5,29 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact - Ayinde Sodiq</title>
-    <link rel="stylesheet" href="../style.scss">
-     </head>
+    <link rel="stylesheet" href="../style.scss" />
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+  </head>
   <body>
-    
-<!-- Loader -->
-<div class="loader-wrapper">
-  <div class="loader"></div>
-  <div class="loader-section section-left"></div>
-  <div class="loader-section section-right"></div>
-</div>
+    <!-- Loader -->
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
 
     <div class="row">
       <div class="column left-side" id="left-side-bar">
         <div class="navigations">
           <ul>
             <li class="home-icon">
-                <a href="/">   
-                    <img
-                      class="icon"
-                      src="../assets/svgs/home-svgrepo-com.svg"
-                      alt=""
-                    />
-                </a>
+              <a href="/">
+                <img
+                  class="icon"
+                  src="../assets/svgs/home-svgrepo-com.svg"
+                  alt=""
+                />
+              </a>
             </li>
             <li><a href="/about">ABOUT</a></li>
             <li><a class="active" href="/contact">CONTACT</a></li>
@@ -38,7 +38,11 @@
       <div class="column middle" id="main">
         <ul class="mobile-nav">
           <li class="home-icon">
-            <img class="icon" src="../assets/svgs/home-svgrepo-com.svg" alt="home" />
+            <img
+              class="icon"
+              src="../assets/svgs/home-svgrepo-com.svg"
+              alt="home"
+            />
           </li>
           <li><a href="/about">ABOUT</a></li>
           <li><a class="active" href="/contact">CONTACT</a></li>
@@ -52,55 +56,95 @@
             request, question or anything you wish to share with me. Kindly make
             use of the form, friend.
           </p>
-          <form action="#" id="contact-form">
-            <input type="hidden" name="contact_number">
-            <input type="text" name="user_name" id="" placeholder="Name" autocomplete="0" />
-            <input type="email" name="user_email" id="" placeholder="Email" autocomplete="0" />
+          <form action="" id="contact-form">
+            <input type="text" id="name" placeholder="Name" autocomplete="0" />
+            <input
+              type="email"
+              id="email"
+              placeholder="Email"
+              autocomplete="0"
+            />
 
             <div class="message">
-              <input type="text" placeholder="Subject" autocomplete="0" />
+              <input
+                type="text"
+                id="subject"
+                placeholder="Subject"
+                autocomplete="0"
+              />
               <textarea
-                name="message"
+                id="message"
                 cols="30"
                 rows="8"
                 placeholder="Message body..."
               ></textarea>
             </div>
-            <button type="submit" value="Send">SEND</button>
+            <button type="submit">SEND</button>
           </form>
         </div>
       </div>
     </div>
-    
+
     <div class="socials">
-        <a target="_blank" href="https://github.com/realAyinde">
-          <img
-            class="item-pic"
-            src="../assets/svgs/github-alt-svgrepo-com.svg"
-            alt=""
-          />
-        </a>
-        <a target="_blank" href="https://twitter.com/realAyinde">
-          <img
-            class="item-pic"
-            src="../assets/svgs/twitter-social-media-svgrepo-com.svg"
-            alt=""
-          />
-        </a>
-        <a target="_blank" href="https://www.linkedin.com/in/realayinde">
-          <img
-            class="item-pic"
-            src="../assets/svgs/linkedin-svgrepo-com.svg"
-            alt=""
-          />
-        </a>
-      </div>
-      <script src="https://smtpjs.com/v3/smtp.js">
-      </script>
+      <a target="_blank" href="https://github.com/realAyinde">
+        <img
+          class="item-pic"
+          src="../assets/svgs/github-alt-svgrepo-com.svg"
+          alt=""
+        />
+      </a>
+      <a target="_blank" href="https://twitter.com/realAyinde">
+        <img
+          class="item-pic"
+          src="../assets/svgs/twitter-social-media-svgrepo-com.svg"
+          alt=""
+        />
+      </a>
+      <a target="_blank" href="https://www.linkedin.com/in/realayinde">
+        <img
+          class="item-pic"
+          src="../assets/svgs/linkedin-svgrepo-com.svg"
+          alt=""
+        />
+      </a>
+    </div>
     <script>
-        window.addEventListener('load',function(){
-    document.querySelector('body').classList.add("loaded")  
-  });
+      document.getElementById("contact-form").addEventListener("submit", submitForm)
+      function submitForm(e) {
+        e.preventDefault();
+
+        // Get Input values
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let subject = document.getElementById("subject").value;
+        let message = document.getElementById("message").value;
+
+        sendEmail(name, email, subject, message);
+        document.getElementById("contact-form").reset();
+      }
+
+      function sendEmail(name, email, subject, message) {
+        Email.send({
+          Host: "smtp.gmail.com",
+          Username: "ayindesodeeq2@gmail.com",
+          Password: "fwagsoipjrhfmhrl",
+          To: "realayindesodeeq@gmail.com",
+          From: "ayindesodeeq2@gmail.com",
+          Subject: `${name} dropped a message`,
+          Body: `<p><b>Name:</b> ${name} </p>
+          <p><b>Email:</b> ${email} </p>
+          <p><b>Subject:</b> ${subject}</p>
+                <hr/>
+                ${message}`,
+        }).then((message) => {
+          console.log("sucess");
+          alert("sent succesfully")});
+      }
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        document.querySelector("body").classList.add("loaded");
+      });
     </script>
   </body>
 </html>
