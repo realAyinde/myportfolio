@@ -126,9 +126,20 @@ body {
       padding: 4px;
 
       a {
-        color: black;
         font-weight: bold;
         line-height: 32px;
+        color: $color-2;
+        transition: 0.2s;
+
+        &:hover {
+          border-bottom: 2px solid $color-2;
+          font-weight: bold;
+        }
+
+        &.active {
+          border-bottom: 2px solid $color-2;
+          font-weight: bold;
+        }
       }
 
       &.home-icon {
@@ -137,8 +148,10 @@ body {
         img {
           width: 32px;
           height: 32px;
+          cursor: pointer;
         }
       }
+
       &.switch {
         //  align-self: center;
         //  width: 42px;
