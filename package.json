@@ -8,7 +8,7 @@
     "clean": "rm dist/* dist/**",
     "start": "parcel src/index.html src/about/index.html src/contact/index.html src/others/index.html",
     "watch": "parcel watch",
-    "build-prod": "parcel build"
+    "build": "parcel build src/index.html src/about/index.html src/contact/index.html src/others/index.html"
   },
   "keywords": [],
   "author": "Ayinde Sodiq",
