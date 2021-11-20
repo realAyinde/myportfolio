@@ -2,7 +2,13 @@
   "name": "myportfolio",
   "version": "1.0.0",
   "description": "",
-  "source": ["src/index.html", "src/about/index.html", "src/contact/index.html", "src/others/index.html"],
+  "source": [
+    "src/index.html",
+    "src/about/index.html",
+    "src/contact/index.html",
+    "src/others/index.html",
+    "src/sitemap.xml"
+  ],
   "scripts": {
     "clean": "rm dist/*",
     "start": "parcel",
@@ -13,7 +19,9 @@
   "author": "Ayinde Sodiq",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-xml": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
+    "@parcel/transformer-xml": "^2.0.1",
     "parcel": "^2.0.1"
   }
 }
