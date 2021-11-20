@@ -6,8 +6,7 @@
     "src/index.html",
     "src/about/index.html",
     "src/contact/index.html",
-    "src/others/index.html",
-    "src/sitemap.xml"
+    "src/others/index.html"
   ],
   "scripts": {
     "clean": "rm dist/*",
