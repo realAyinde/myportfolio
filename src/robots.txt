@@ -4,4 +4,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://ayindesodiq.netlify.app/sitemap.txt
+Sitemap: https://ayindesodiq.netlify.app/sitemap.xml
