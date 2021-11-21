@@ -5,6 +5,7 @@
   "source": [
     "src/index.html",
     "src/about/index.html",
+    "src/articles/index.html",
     "src/contact/index.html",
     "src/others/index.html"
   ],
