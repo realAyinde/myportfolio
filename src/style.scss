@@ -644,6 +644,41 @@ body {
         color: $color-7;
         font-size: 0.9em;
       }
+
+      hr {
+        border: 1px solid $color-2;
+      }
+
+      .author {
+        display: flex;
+
+        .avatar {
+          flex: content;
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          border: 1px solid $color-2;
+        }
+
+        .author-details {
+          flex: auto;
+
+          .author-name {
+            font-size: 1.2em;
+            color: $color-7;
+          }
+          .author-proffesion {
+            font-size: .9em;
+            color: $color-2;
+          }
+          .author-socials {
+            display: flex;
+            gap: .5em;
+
+          }
+        }
+
+      }
     }
   }
 }
