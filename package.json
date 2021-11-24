@@ -1,7 +1,8 @@
 {
   "name": "myportfolio",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "My personal website https://ayindesodiq.netlify.app",
+  "main": "index.js",
   "source": [
     "src/index.html",
     "src/about/index.html",
@@ -10,9 +11,10 @@
     "src/others/index.html"
   ],
   "scripts": {
-    "clean": "rm dist/*",
-    "start": "parcel",
-    "watch": "parcel watch",
+    "css": "node-sass src/scss/style.scss src/style.css",
+    "scss-watch": "node-sass --watch src/scss/style.scss src/style.css",
+    "sass-watch": "nodemon -e scss -x 'npm run css'",
+    "serve": "parcel",
     "build": "parcel build"
   },
   "keywords": [],
@@ -23,6 +25,8 @@
     "@parcel/resolver-glob": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
     "@parcel/transformer-xml": "^2.0.1",
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.15",
     "parcel": "^2.0.1"
   }
 }
