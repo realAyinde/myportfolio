@@ -4,9 +4,15 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ayinde Sodiq :: Admin</title>
+    <link
+      rel="icon"
+      href="../assets/images/ayinde_sodiq_ojo.jpg"
+      type="image/jpg"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../style.scss" />
-  </head>
+    <link rel="stylesheet" href="/node_modules/@fortawesome/fontawesome-free/css/all.css"></script>
+</head>
   <body>
     <div class="loader-wrapper">
       <div class="loader"></div>
@@ -15,45 +21,254 @@
     </div>
 
     <div id="admin">
-      <div id="container">
-        <div id="header">
-            <div class="nav-content">
-                
-            </div>
+      <header>
+        <div id="navigations">
+          <ul>
+            <li><a href="" class="active"><i class="fas fa-columns fa-lg"></i> Dashboard</a></li>
+            <li><a href=""><i class="fas fa-journal-whills fa-lg"></i> Articles</a></li>
+            <li><a href=""><i class="fas fa-folder fa-lg"></i> Files</a></li>
+            <li><a href=""><i class="fas fa-users fa-lg"></i> Users</a></li>
+            <li><a href=""><i class="fas fa-chart-line fa-lg"></i> Analytics</a></li>
+            <li><a href=""><i class="fas fa-tasks fa-lg"></i> Task Manager</a></li>
+          </ul>
+          <ul>
+            <li>
+              <a href=""><i class="fas fa-cog fa-lg"></i> Settings</a>
+            </li>
+            <li>
+              <a href=""><i class="fas fa-power-off fa-lg"></i> Log out</a>
+            </li>
+          </ul>
         </div>
-        <div id="sidebar">
-            <ul>
-                <li><a href="">Overview</a></li>
-                <li><a href="">Posts</a></li>
-                <li><a href="">Activities</a></li>
-            </ul>
-        </div>
-        <div id="content">
-          <div class="main-content">
-            <div class="container">
+      </header>
+      <main>
+        <div class="main-body">
+
+        <div class="main-top">
+          <span style="font-size: 16px; color: #000000;">
+            <i class="fas fa-bullhorn"></i>
+          </span>
+          <span style="font-size: 16px; color: #000000;">
+            <i class="fas fa-envelope"></i>
+          </span>
+          <span style="font-size: 16px; color: #000000;">
+            <i class="fas fa-user-shield"></i>
+          </span>
+            <span>Ayinde Sodiq</span>
+          </div>
+        <div class="main-content">
+          <section>
+            <h1>Dashboard</h1>
+            <div class="flex-3">
               <div class="card">
-                <div class="card-header">
-                    <div class="buttons">
-                    <a href="">Add</a>
-                  <a href="">filter</a>
-                    </div>
-                    <div class="search-box">
-                        <input type="text" name="" id="" placeholder="Search here">
-                    </div>
-                  
+                <div class="card-icon"><i class="fas fa-journal-whills fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Article</h2>
+                  <p>Organize, edit and delete your articles</p>
+                  <div class="buttons">
+                    <a class="btn-outline">Add new</a>
+                    <a href="" class="btn-next">Browse</a>
+                  </div>
                 </div>
-                <div class="card-body">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Debitis obcaecati earum, fugiat cupiditate eius delectus.
-                  Minima officia necessitatibus numquam dolor unde? Eligendi,
-                  reprehenderit.
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-users fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Users</h2>
+                  <p>Organize, edit and delete your users</p>
+                  <div class="buttons">
+                    <a class="btn-outline">Add new</a>
+                    <a href="" class="btn-next">Browse</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-tags fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Tags</h2>
+                  <p>Organize, edit, manage and delete your tags</p>
+                  <div class="buttons">
+                    <a class="btn-outline">Add new</a>
+                    <a href="" class="btn-next">Browse</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-user fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Authors</h2>
+                  <p>Manage Authors</p>
+                  <div class="buttons">
+                    <a class="btn-outline">Add new</a>
+                    <a href="" class="btn-next">Browse <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-user-alt fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Clients</h2>
+                  <p>Organize, edit, manage and delete your tags</p>
+                  <div class="buttons">
+                    <a class="btn-outline">Add new</a>
+                    <a href="" class="btn-next">Browse <i class="fas fa-long-arrow-alt-right"></i></a>
+                  </div>
+                </div>
+              </div>
+              <div class="card">
+                <div class="card-icon"><i class="fas fa-cogs fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Settings</h2>
+                  <p>Manage settings of your Admin Panel</p>
+                  <div class="buttons">
+                    <a class="btn-outline">Manage</a>
+                    <!-- <a href="" class="btn-next">Browse</a> -->
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="right-content"></div>
+            <h1>Applications</h1>
+            <div class="flex-3">
+              <div class="card bg-dark">
+                <div class="card-icon"><i class="fas fa-mail-bulk fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Mail</h2>
+                  <p>Go to web mail application</p>
+                  <div class="buttons">
+                    <a href="" class="btn-next p-0">Go to mail</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-dark">
+                <div class="card-icon"><i class="fas fa-chart-line fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Analytics</h2>
+                  <p>Check your statistics with google analytics</p>
+                  <div class="buttons">
+                    <a href="" class="btn-next p-0">Go to analytics</a>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-dark">
+                <div class="card-icon"><i class="fas fa-tasks fa-2x"></i></div>
+                <div class="card-content">
+                  <h2>Manager</h2>
+                  <p>Manage your team tasks</p>
+                  <div class="buttons">
+                    <a href="" class="btn-next p-0">Go to manager</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h1>Quick Overview</h1>
+            <div class="flex-2">
+              <div class="data-card">
+                <div class="data-card-header">
+                  <h2>Articles</h2>
+                  <p>Total:931</p>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Title <i class="fas fa-chevron-down fa-sm"></i></th>
+                      <th>Author <i class="fas fa-chevron-down fa-sm"></i></th>
+                      <th>Date Added <i class="fas fa-chevron-down fa-sm"></i></th>
+                      <th>Views <i class="fas fa-chevron-down fa-sm"></i></th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Admin</td>
+                      <td>20-10-2020</td>
+                      <td>1235</td>
+                      <td><a href="">Edit</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Admin</td>
+                      <td>20-10-2010</td>
+                      <td>1935</td>
+                      <td><a href="">Edit</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio nulla amet nesciunt.</td>
+                      <td>Admin</td>
+                      <td>20-10-2001</td>
+                      <td>335</td>
+                      <td><a href="">Edit</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem dey ipsum dolor sit amet.</td>
+                      <td>Admin</td>
+                      <td>20-10-2000</td>
+                      <td>1235</td>
+                      <td><a class="btn-outline" href="">Edit</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="data-card-footer">
+                  <a href="">More</a>
+                </div>
+              </div>
+              <div class="data-card">
+                <div class="data-card-header">
+                  <h2>Sessions</h2>
+                  <p>Ostanie: 7dpi</p>
+                </div>
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Title</th>
+                      <th>Author</th>
+                      <th>Date Added</th>
+                      <th>Views</th>
+                      <th></th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Admin</td>
+                      <td>20-10-2020</td>
+                      <td>1235</td>
+                      <td><a href="">Edit</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Admin</td>
+                      <td>20-10-2010</td>
+                      <td>1935</td>
+                      <td><a href="">Edit</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem ipsum dolor sit amet.</td>
+                      <td>Admin</td>
+                      <td>20-10-2010</td>
+                      <td>335</td>
+                      <td><a href="">Edit</a></td>
+                    </tr>
+                    <tr>
+                      <td>Lorem dey ipsum dolor sit amet.</td>
+                      <td>Admin</td>
+                      <td>20-10-2020</td>
+                      <td>1235</td>
+                      <td><a href="">Edit</a></td>
+                    </tr>
+                  </tbody>
+                </table>
+                <div class="data-card-footer">
+                  <a href="">This Week</a>
+                  <a href="">Last Week</a>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
+                  
       </div>
+      </main>
     </div>
 
     <div id="app"></div>

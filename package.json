@@ -11,22 +11,19 @@
     "src/admin/index.html"
   ],
   "scripts": {
-    "css": "node-sass src/scss/style.scss src/style.css",
-    "scss-watch": "node-sass --watch src/scss/style.scss src/style.css",
-    "sass-watch": "nodemon -e scss -x 'npm run css'",
     "serve": "parcel",
+    "watch": "parcel watch",
     "build": "parcel build"
   },
   "keywords": [],
   "author": "Ayinde Sodiq",
   "license": "ISC",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
     "@parcel/packager-xml": "^2.0.1",
     "@parcel/resolver-glob": "^2.0.1",
     "@parcel/transformer-sass": "^2.0.1",
     "@parcel/transformer-xml": "^2.0.1",
-    "node-sass": "^6.0.1",
-    "nodemon": "^2.0.15",
     "parcel": "^2.0.1"
   }
 }
