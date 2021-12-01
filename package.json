@@ -8,7 +8,7 @@
     "src/about/index.html",
     "src/articles/index.html",
     "src/contact/index.html",
-    "src/others/index.html"
+    "src/admin/index.html"
   ],
   "scripts": {
     "css": "node-sass src/scss/style.scss src/style.css",

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ayinde Sodiq :: Admin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../style.scss" />
+  </head>
+  <body>
+    <div class="loader-wrapper">
+      <div class="loader"></div>
+      <div class="loader-section section-left"></div>
+      <div class="loader-section section-right"></div>
+    </div>
+
+    <div id="admin">
+      <div id="container">
+        <div id="header">
+            <div class="nav-content">
+                
+            </div>
+        </div>
+        <div id="sidebar">
+            <ul>
+                <li><a href="">Overview</a></li>
+                <li><a href="">Posts</a></li>
+                <li><a href="">Activities</a></li>
+            </ul>
+        </div>
+        <div id="content">
+          <div class="main-content">
+            <div class="container">
+              <div class="card">
+                <div class="card-header">
+                    <div class="buttons">
+                    <a href="">Add</a>
+                  <a href="">filter</a>
+                    </div>
+                    <div class="search-box">
+                        <input type="text" name="" id="" placeholder="Search here">
+                    </div>
+                  
+                </div>
+                <div class="card-body">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Debitis obcaecati earum, fugiat cupiditate eius delectus.
+                  Minima officia necessitatibus numquam dolor unde? Eligendi,
+                  reprehenderit.
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="right-content"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="app"></div>
+    <script src="../index.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        document.querySelector("body").classList.add("loaded");
+      });
+    </script>
+  </body>
+</html>

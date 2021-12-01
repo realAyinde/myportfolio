@@ -1,0 +1,87 @@
+$bg: #e6ddd1;
+$color-1: #edbd9b;
+$color-2: #2a4f4f;
+$color-3: #686230;
+$color-4: #b8b799;
+$color-5: #b1cac4;
+$color-6: #f1e2d4;
+$color-7: #8a4a27;
+
+body {
+  text-align: center; /* This is a hack for older browsers to center the page */
+}
+
+#admin {
+  #container {
+    margin: 0 auto; /* This centers the page in modern browsers */ /* This is a hack for older browsers to center the page */
+    max-width: 1200px; /* This sets our total page width */
+  }
+
+  #header {
+    width: 100%; /* This sets the header to stretch the full page width */
+  }
+
+  #navigation li {
+    display: inline; /* Make our navigation display in a line */
+  }
+
+  #content {
+    float: right; /* This causes the content to move to the right */
+    width: 75%; /* We need to set the width whenever we float an element */
+
+    .main-content {
+    }
+
+    .right-content {
+    }
+  }
+
+  .card {
+    border: 1px solid $color-7;
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+
+    .card-header {
+      display: flex;
+      border-bottom: 1px solid $color-7;
+
+      .buttons {
+          display: flex;
+
+          a {
+            padding: 8px;
+            background: $color-7;
+            color: #ffffff;
+          }
+      }
+
+      .search-box {
+          flex: 1;
+
+          input {
+              width: 100%;
+              outline: none;
+              margin: 0;
+              padding: 8px;
+              border: none;
+          }
+      }
+    }
+
+    .card-body {
+      padding: 8px;
+    }
+  }
+
+  #sidebar {
+    float: left; /* This causes the sidebar to move to the left */
+    width: 25%; /* We need to set the width whenever we float an element */
+  }
+
+  #footer {
+    clear: both; /* This makes sure that the footer clears both the sidebar and content floats */
+    width: 960px; /* This sets the footer to stretch the full page width */
+  }
+}
