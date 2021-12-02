@@ -491,15 +491,18 @@ body {
     flex-direction: column;
     gap: 1em;
 
-    button {
+    a {
       width: 50%;
       margin: auto;
       padding: 0.75rem 1rem;
       border-radius: 4px;
       outline: none;
+      border: 1px solid $color-7;
       background: transparent;
       cursor: pointer;
+      text-align: center;
       transition: 0.3s;
+      color: inherit;
 
       &:hover {
         background: $color-1;
