@@ -9,7 +9,7 @@
     "src/others/index.html"
   ],
   "scripts": {
-    "clean": "rm dist/*",
+    "clean": "rm -rf dist/* .parcel-cache/*",
     "start": "parcel",
     "watch": "parcel watch",
     "build": "parcel build"

@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-      <!-- Google Tag Manager -->
-      <script>
-        (function (w, d, s, l, i) {
-          w[l] = w[l] || [];
-          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-          var f = d.getElementsByTagName(s)[0],
-            j = d.createElement(s),
-            dl = l != "dataLayer" ? "&l=" + l : "";
-          j.async = true;
-          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
-          f.parentNode.insertBefore(j, f);
-        })(window, document, "script", "dataLayer", "GTM-NZ8ZFL9");
-      </script>
-      <!-- End Google Tag Manager -->
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-NZ8ZFL9");
+    </script>
+    <!-- End Google Tag Manager -->
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Ayinde Sodiq :: Contact</title>
-    <meta name="google-site-verification" content="HBD5ueU8qNjBmtBRRBg-o7fnc5nkeO_6dSPt25cbUGc"/>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <meta
+      name="google-site-verification"
+      content="HBD5ueU8qNjBmtBRRBg-o7fnc5nkeO_6dSPt25cbUGc"
+    />
     <meta name="author" content="Ayinde Sodiq" />
     <meta
       name="description"
@@ -61,15 +65,24 @@
       content="A Nigerian based Software Engineer and Data Analyst"
     />
     <meta name="twitter:image" content="../assets/images/ayinde_sodiq.jpg" />
-    <meta name="twitter:image:src" content="../assets/images/ayinde_sodiq.jpg" />
+    <meta
+      name="twitter:image:src"
+      content="../assets/images/ayinde_sodiq.jpg"
+    />
     <meta name="twitter:image:alt" content="Ayinde Sodiq" />
     <meta name="twitter:app:country" content="NG" />
   </head>
   <body>
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZ8ZFL9"
-  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-NZ8ZFL9"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <!-- Loader -->
     <div class="loader-wrapper">
       <div class="loader"></div>
@@ -119,7 +132,7 @@
             request, question or anything you wish to share with me. Kindly make
             use of the form, friend.
           </p>
-          <form action="" id="contact-form">
+          <form id="contact-form">
             <input type="text" id="name" placeholder="Name" autocomplete="0" />
             <input
               type="email"
@@ -142,7 +155,11 @@
                 placeholder="Message body..."
               ></textarea>
             </div>
-            <button type="submit">SEND</button>
+            <button type="submit" id="submit">
+              SEND
+              <!-- <div class="dot-wrapper"><div class="dot-pulse"></div></div> -->
+            </button>
+            <!-- <button type="submit" style="position:relative;">SEND</button> -->
           </form>
         </div>
       </div>
@@ -172,7 +189,10 @@
       </a>
     </div>
     <script>
-      document.getElementById("contact-form").addEventListener("submit", submitForm)
+      document
+        .getElementById("contact-form")
+        .addEventListener("submit", submitForm);
+
       function submitForm(e) {
         e.preventDefault();
 
@@ -182,8 +202,14 @@
         let subject = document.getElementById("subject").value;
         let message = document.getElementById("message").value;
 
-        sendEmail(name, email, subject, message);
+        document.getElementById(
+          "submit"
+          ).innerHTML = `<div class="dot-wrapper"><div class="dot-pulse"></div></div>`;
+          document.getElementById("submit").disabled = true;
+        setTimeout(sendEmail(name, email, subject, message), 3000);
+        // sendEmail(name, email, subject, message);
         document.getElementById("contact-form").reset();
+        document.getElementById("submit").innerHTML = `SEND`;
       }
 
       function sendEmail(name, email, subject, message) {
@@ -201,7 +227,9 @@
                 ${message}`,
         }).then((message) => {
           console.log("sucess");
-          alert("sent succesfully")});
+          alert("sent succesfully");
+          document.getElementById("contact-form").reset();
+        });
       }
     </script>
     <script>
@@ -209,6 +237,10 @@
         document.querySelector("body").classList.add("loaded");
       });
     </script>
-    <a style="display: none" href="./google6960a78bc312e2c8.html" aria-label="google-verify"></a>
+    <a
+      style="display: none"
+      href="./google6960a78bc312e2c8.html"
+      aria-label="google-verify"
+    ></a>
   </body>
 </html>
