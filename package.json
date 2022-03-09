@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "description": "My personal website https://ayindesodiq.netlify.app",
   "source": [
-    "src/index.html",
-    "src/about/index.html",
-    "src/contact/index.html",
-    "src/others/index.html"
+    "src/index.html"
   ],
   "scripts": {
     "clean": "rm -rf dist/* .parcel-cache/*",
@@ -18,9 +15,9 @@
   "author": "Ayinde Sodiq",
   "license": "ISC",
   "devDependencies": {
-    "@parcel/packager-xml": "^2.0.1",
-    "@parcel/transformer-sass": "^2.0.1",
-    "@parcel/transformer-xml": "^2.0.1",
-    "parcel": "^2.0.1"
+    "autoprefixer": "^10.4.2",
+    "parcel": "^2.3.2",
+    "postcss": "^8.4.8",
+    "tailwindcss": "^3.0.23"
   }
 }
