@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "My personal website https://ayindesodiq.netlify.app",
   "source": [
-    "src/index.html"
+    "src/index.html",
+    "src/resume.html"
   ],
   "scripts": {
     "clean": "rm -rf dist/* .parcel-cache/*",
@@ -19,5 +20,8 @@
     "parcel": "^2.3.2",
     "postcss": "^8.4.8",
     "tailwindcss": "^3.0.23"
+  },
+  "dependencies": {
+    "vue": "^3.2.31"
   }
 }
